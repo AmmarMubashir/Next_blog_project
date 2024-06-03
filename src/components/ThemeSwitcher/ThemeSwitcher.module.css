@@ -1,0 +1,25 @@
+.theme {
+  /* height: 20px; */
+  width: 55px;
+  padding: 5px 5px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 15px;
+  cursor: pointer;
+  position: relative;
+}
+
+.circle {
+  height: 23px;
+  width: 23px;
+  border-radius: 50%;
+  background-color: red;
+  position: absolute;
+}
+.moon {
+  color: white;
+}
+.sun {
+  color: yellow;
+}

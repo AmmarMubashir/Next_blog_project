@@ -1,0 +1,38 @@
+.logout {
+  display: flex;
+  gap: 15px;
+}
+.menuIcon {
+  font-size: 2rem;
+  display: none;
+}
+.mobileNav {
+  position: absolute;
+  top: 90px;
+  left: 0;
+  background-color: var(--bg);
+  height: calc(100vh - 90px);
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 50px;
+  font-size: 36px;
+  z-index: 999;
+}
+
+@media screen and (max-width: 860px) {
+  .menuIcon {
+    display: flex;
+  }
+  .link {
+    display: none;
+  }
+  .logout {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+  }
+}

@@ -1,0 +1,76 @@
+.conntainer {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.title {
+  padding: 50px;
+  font-size: 64px;
+  width: 100%;
+  border: none;
+  outline: none;
+  background: transparent;
+  color: var(--textColor);
+}
+.input::placeholder {
+  color: gray;
+}
+.button,
+.addButton {
+  border: none;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: transparent;
+  border: 1px solid var(--textColor);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+.editor {
+  display: flex;
+  gap: 20px;
+  height: 700px;
+  position: relative;
+}
+.button svg,
+.addButton svg {
+  font-size: 20px;
+  color: var(--textColor);
+}
+.addButton {
+  border: 1px solid #1a8917;
+}
+.add {
+  display: flex;
+  gap: 20px;
+  background: var(--bg);
+  position: absolute;
+  z-index: 999;
+  width: 100%;
+  left: 50px;
+}
+.textArea {
+  width: 100%;
+}
+
+.publish {
+  position: absolute;
+  top: 30px;
+  right: 20px;
+  padding: 10px 20px;
+  border: none;
+  background: #1a8917;
+  color: white;
+  cursor: pointer;
+  border-radius: 20px;
+}
+
+@media screen and (max-width: 768px) {
+  .title {
+    font-size: 48px;
+    padding: 10px;
+  }
+}

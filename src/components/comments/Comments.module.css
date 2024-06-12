@@ -1,0 +1,64 @@
+.container {
+  margin-top: 50px;
+}
+.title {
+  color: var(--softTextColor);
+  margin-bottom: 30px;
+}
+.write {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 30px;
+}
+.input {
+  padding: 20px;
+  width: 100%;
+  resize: none;
+}
+.button {
+  padding: 16px;
+  background: teal;
+  color: white;
+  font-weight: bold;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.comments {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  margin-top: 40px;
+}
+.comment {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.userDetail {
+  display: flex;
+  gap: 15px;
+  align-items: center;
+}
+.userImageContainer {
+  width: 50px;
+  height: 50px;
+  position: relative;
+}
+.userImage {
+  object-fit: cover;
+  border-radius: 50%;
+}
+.userInfo {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+.userName {
+  color: var(--softTextColor);
+}
+.date {
+  color: gray;
+}

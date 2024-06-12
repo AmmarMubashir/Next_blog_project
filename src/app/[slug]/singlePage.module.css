@@ -1,0 +1,84 @@
+.infoContainer {
+  display: flex;
+  justify-content: space-between;
+  gap: 50px;
+}
+.textContainer {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 20px;
+}
+.textTitle {
+  font-size: 64px;
+}
+.userDetail {
+  display: flex;
+  gap: 15px;
+  align-items: center;
+}
+.userImageContainer {
+  width: 50px;
+  height: 50px;
+  position: relative;
+}
+.userImage {
+  object-fit: cover;
+  border-radius: 50%;
+}
+.userInfo {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+.userName {
+  color: var(--softTextColor);
+}
+.date {
+  color: gray;
+}
+.imageContainer {
+  flex: 1;
+  height: 350px;
+  position: relative;
+}
+.blogImage {
+  object-fit: cover;
+  border-radius: 15px;
+}
+.content {
+  /* margin: 20px 0px; */
+  display: flex;
+  gap: 50px;
+}
+.post {
+  flex: 5;
+}
+.postContent {
+  margin-top: 60px;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+@media screen and (max-width: 1540px) {
+  .textTitle {
+    font-size: 54px;
+  }
+}
+@media screen and (max-width: 1280px) {
+  .textTitle {
+    font-size: 42px;
+  }
+}
+@media screen and (max-width: 1024px) {
+  .imageContainer {
+    display: none;
+  }
+}
+@media screen and (max-width: 640px) {
+  .textTitle {
+    font-size: 25px;
+  }
+}

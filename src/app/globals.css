@@ -49,3 +49,17 @@ body {
   padding-left: 20px;
   padding-right: 20px;
 }
+
+@media screen and (max-width: 640px) {
+  h1 {
+    font-size: 25px;
+  }
+}
+
+.ql-container {
+  font-size: 20px !important;
+}
+
+.quill > .ql-container > .ql-editor.ql-blank::before {
+  color: gray;
+}

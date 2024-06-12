@@ -24,37 +24,34 @@ const AuthLinks = () => {
         </div>
       )}
 
-      <div>
-        <>
-          {open ? (
-            <ImCross
-              className={styles.menuIcon}
-              onClick={() => setOpen(!open)}
-            />
-          ) : (
-            <GiHamburgerMenu
-              className={styles.menuIcon}
-              onClick={() => setOpen(!open)}
-            />
-          )}
-        </>
-        {open && (
-          <div className={styles.mobileNav}>
-            <Link href="/">Homepage</Link>
-            <Link href="/">Contact</Link>
-            <Link href="/">About</Link>
-
-            {status === "notAuthenticated" ? (
-              <Link href="/">Login</Link>
-            ) : (
-              <div className={styles.logout}>
-                <Link href="/">Write</Link>
-                <span>Logout</span>
-              </div>
-            )}
-          </div>
+      {/* <div className=""> */}
+      <>
+        {open ? (
+          <ImCross className={styles.menuIcon} onClick={() => setOpen(!open)} />
+        ) : (
+          <GiHamburgerMenu
+            className={styles.menuIcon}
+            onClick={() => setOpen(!open)}
+          />
         )}
-      </div>
+      </>
+      {open && (
+        <div className={styles.mobileNav}>
+          <Link href="/">Homepage</Link>
+          <Link href="/">Contact</Link>
+          <Link href="/">About</Link>
+
+          {status === "notAuthenticated" ? (
+            <Link href="/">Login</Link>
+          ) : (
+            <div className={styles.logout}>
+              <Link href="/">Write</Link>
+              <span>Logout</span>
+            </div>
+          )}
+        </div>
+      )}
+      {/* </div> */}
     </div>
   );
 };

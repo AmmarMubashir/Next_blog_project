@@ -5,7 +5,11 @@ import { FaPlus } from "react-icons/fa6";
 import { CiImageOn } from "react-icons/ci";
 import { MdOutlineFileDownload } from "react-icons/md";
 import { PiVideo } from "react-icons/pi";
-import ReactQuill from "react-quill";
+import dynamic from "next/dynamic";
+// import ReactQuill from "react-quill";
+// import "react-quill/dist/quill.bubble.css";
+
+const ReactQuill = dynamic(() => import("react-quill"), { ssr: false });
 import "react-quill/dist/quill.bubble.css";
 
 const page = () => {

@@ -4,23 +4,27 @@ import styles from "./AuthLinks.module.css";
 import { GiHamburgerMenu } from "react-icons/gi";
 import { ImCross } from "react-icons/im";
 import { useState } from "react";
+import { signOut, useSession } from "next-auth/react";
 
 const AuthLinks = () => {
-  const status = "otAuthenticated";
   const [open, setOpen] = useState(false);
-  console.log(open);
+  const { status } = useSession();
+
+  console.log(status, "status");
   return (
     <div className={styles.authLink}>
-      {status === "notAuthenticated" ? (
-        <Link href="/" className={styles.link}>
+      {status === "unauthenticated" ? (
+        <Link href="/login" className={styles.link}>
           Login
         </Link>
       ) : (
         <div className={styles.logout}>
-          <Link href="/" className={styles.link}>
+          <Link href="/write" className={styles.link}>
             Write
           </Link>
-          <span className={styles.link}>Logout</span>
+          <span className={styles.link} onClick={signOut}>
+            Logout
+          </span>
         </div>
       )}
 
@@ -41,11 +45,11 @@ const AuthLinks = () => {
           <Link href="/">Contact</Link>
           <Link href="/">About</Link>
 
-          {status === "notAuthenticated" ? (
-            <Link href="/">Login</Link>
+          {status === "unauthenticated" ? (
+            <Link href="/login">Login</Link>
           ) : (
             <div className={styles.logout}>
-              <Link href="/">Write</Link>
+              <Link href="/write">Write</Link>
               <span>Logout</span>
             </div>
           )}
